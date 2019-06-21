@@ -1,4 +1,4 @@
-# Hello this is a PandaScore API test 
+# PandaScore API test 
 
 To start your Phoenix server:
 
