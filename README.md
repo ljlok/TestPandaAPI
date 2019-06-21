@@ -13,7 +13,8 @@ To start your Phoenix server:
   * The algorith of odd is: 
   
   ```(percentage_wins_in_last_100_matches * weight1 + percentage_wins_over_opponent_in_last_100_matches * weight2) * 100%```
-  
+  * The 100 matches are all of finished and the recent 100 games are more representative of the team's recent situation
+  * The `percentage_wins_over_opponent` is much more important so with a weight=0.7, it's just a method naive, better to ajust the param after dozens of experiments.
   * weight1 = 0.3 , weight2 = 0.7
   * I tried to use the stat-api for analysing the odd but have no auth
 
