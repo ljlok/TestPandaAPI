@@ -16,7 +16,7 @@ defmodule Hello.Application do
       # Starts a worker by calling: Hello.Worker.start_link(arg)
       # {Hello.Worker, arg},
       # MatchCache.Supervisor,
-      supervisor(MatchCache.Supervisor, []),
+      MatchCache.Supervisor,
 
     ]
 
