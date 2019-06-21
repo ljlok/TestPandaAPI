@@ -10,12 +10,16 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :hello, HelloWeb.Endpoint,
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  # url: [host: "example.com", port: 80],
+  # cache_static_manifest: "priv/static/cache_manifest.json"
+  url: [scheme: "https", host: "mysterious-meadow-6277", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
 
 # Do not print debug messages in production
 config :logger, level: :info
-
+config :hello,
+  base_url: "https://api.pandascore.co",
+  api_token: System.get_env("API_TOKEN") 
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
