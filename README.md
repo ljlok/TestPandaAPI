@@ -3,9 +3,17 @@
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
+  * Add pandaScore api_token in test.exs, dev.exs for dev mode
   * Create and migrate your database with `mix ecto.setup`
   * Install Node.js dependencies with `cd assets && npm install`
   * Start Phoenix endpoint with `mix phx.server`
+  * Run controller tests by `mix test` and cache tests by `mix test lib/cache/cache_test.exs`
+  * API Route1: `http://localhost:4000/api/matches/upcoming` for upcoming matches
+  * API Route2: `http://localhost:4000/api/matches/384344/odd` for odd 
+  * The algorith of odd is: 
+  (percentage_wins_in_last_100_matches * weight1 + percentage_wins_over_opponent_in_last_100_matches * weight2) * 100%
+  * weight1 = 0.3 , weight2 = 0.7
+  * I tried to use the stat-api for analysing the odd but have no auth
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
