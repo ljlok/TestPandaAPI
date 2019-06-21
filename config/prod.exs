@@ -17,9 +17,7 @@ config :hello, HelloWeb.Endpoint,
 
 # Do not print debug messages in production
 config :logger, level: :info
-config :hello,
-  base_url: "https://api.pandascore.co",
-  api_token: System.get_env("API_TOKEN") 
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
@@ -67,3 +65,6 @@ config :hello,
 # Finally import the config/prod.secret.exs which loads secrets
 # and configuration from environment variables.
 import_config "prod.secret.exs"
+config :hello,
+  base_url: "https://api.pandascore.co",
+  api_token: System.get_env("API_TOKEN")
