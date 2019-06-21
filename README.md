@@ -11,7 +11,9 @@ To start your Phoenix server:
   * API Route1: `http://localhost:4000/api/matches/upcoming` for upcoming matches
   * API Route2: `http://localhost:4000/api/matches/384344/odd` for odd 
   * The algorith of odd is: 
-  (percentage_wins_in_last_100_matches * weight1 + percentage_wins_over_opponent_in_last_100_matches * weight2) * 100%
+  
+  ```(percentage_wins_in_last_100_matches * weight1 + percentage_wins_over_opponent_in_last_100_matches * weight2) * 100%```
+  
   * weight1 = 0.3 , weight2 = 0.7
   * I tried to use the stat-api for analysing the odd but have no auth
 
