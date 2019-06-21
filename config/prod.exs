@@ -13,7 +13,7 @@ config :hello, HelloWeb.Endpoint,
   # url: [host: "example.com", port: 80],
   # cache_static_manifest: "priv/static/cache_manifest.json"
   url: [scheme: "https", host: "mysterious-meadow-6277", port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]]
 
 # Do not print debug messages in production
 config :logger, level: :info
