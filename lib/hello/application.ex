@@ -10,7 +10,7 @@ defmodule Hello.Application do
     import Supervisor.Spec, warn: false
     children = [
       # Start the Ecto repository
-      # Hello.Repo,
+      Hello.Repo,
       # Start the endpoint when the application starts
       HelloWeb.Endpoint,
       # Starts a worker by calling: Hello.Worker.start_link(arg)
