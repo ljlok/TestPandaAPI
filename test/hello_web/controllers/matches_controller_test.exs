@@ -28,7 +28,7 @@ defmodule HelloWeb.MatchesControllerTest do
         assert response.status == 200 
         {:ok, odd} = Poison.decode(response.resp_body)
         Enum.any?(match_as_json.opponents, fn opponent -> assert Map.has_key?(odd, opponent) end)
-        assert Enum.reduce(odd, 0, fn {_name, value}, acc -> acc + value end) == 100
+        assert round(Enum.reduce(odd, 0, fn {_name, value}, acc -> acc + value end)) == 100
     end
 
     defp send_request(conn) do
